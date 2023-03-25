@@ -1,6 +1,6 @@
 # BC Gov IS24 Full Stack Competition Project
 
-" author: Brandon Bouchard
+> author: Brandon Bouchard
 
 ## Welcome
 
