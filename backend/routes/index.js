@@ -1,3 +1,3 @@
 exports.healthRouter = require('./health');
-exports.usersRouter = require('./users');
+exports.productsRouter = require('./products');
 exports.notFoundRouter = require('./404');

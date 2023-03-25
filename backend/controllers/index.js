@@ -1,0 +1,1 @@
+exports.productsControllers = require('./productsControllers');

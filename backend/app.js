@@ -1,7 +1,7 @@
 const express = require('express');
 const logger = require('morgan');
 
-const { healthRouter, usersRouter, notFoundRouter } = require('./routes/index');
+const { healthRouter, productsRouter, notFoundRouter } = require('./routes/index');
 
 const app = express();
 
@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.get('/', (_, res) => res.send('Server is live!'));
 app.use('/health', healthRouter);
-app.use('/users', usersRouter);
+app.use('/products', productsRouter);
 
 // 404 page for any non-matching URLs
 app.use('*', notFoundRouter);
