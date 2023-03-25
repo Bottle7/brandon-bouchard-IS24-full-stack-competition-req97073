@@ -1,0 +1,69 @@
+/* 
+  This allows for more appropriate line-heights.
+  Most noticable on headings as multiplying their
+  line-height by a flat 1.5 is way too much.
+  This solution is far more responsive to 
+  font-size.
+*/
+* {
+  line-height: calc(1em + 0.5rem);
+}
+
+/* 
+  Preferred box-sizing value 
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 
+  Reapply the pointer cursor for anchor tags 
+*/
+a, button {
+  cursor: revert;
+}
+
+/* 
+  Remove list styles (bullets/numbers) 
+*/
+ol, ul, menu {
+  list-style: none;
+}
+
+/* 
+  For images to not be able to exceed their container 
+*/
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* 
+  removes spacing between cells in tables 
+*/
+table {
+  border-collapse: collapse;
+}
+
+/* 
+  revert the 'white-space' property for textarea elements on Safari 
+*/
+textarea {
+  white-space: revert;
+}
+
+/*
+  Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  Eliminate the need for z-index context tracking
+*/
+#root, #__next {
+  isolation: isolate;
+}
