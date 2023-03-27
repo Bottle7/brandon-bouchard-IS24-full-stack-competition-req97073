@@ -1,14 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const { healthControllers } = require("../controllers")
 
-router.get('/', (req, res) => {
-  const data = {
-    uptime: process.uptime(),
-    message: 'API is healthy',
-    date: new Date(),
-  };
-
-  res.status(200).send(data);
-})
+/**
+ * GET healthcheck
+ * @author Brandon Bouchard <brandon.bouchard@gov.bc.ca | brandonjbouchard@gmail.com>
+ * @method GET
+ * @route /health
+ */
+router.get('/', healthControllers.healthcheck)
 
 module.exports = router;
