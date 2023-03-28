@@ -32,6 +32,7 @@ const ProductsTable = () => {
             <th>Developer Names</th>
             <th>Start Date</th>
             <th>Methodology</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>

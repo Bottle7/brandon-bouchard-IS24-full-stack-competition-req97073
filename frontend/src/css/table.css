@@ -3,11 +3,16 @@ table {
   color: var(--dark-grey);
   width: 100%;
   border-radius: var(--radius-1);
-  filter: drop-shadow(0 0 0.5em var(--light-grey));
+  box-shadow: 0 0 1em var(--light-grey);
 }
 
 thead {
-  border-block-end: var(--padding-xs) solid var(--dark-grey);
+  border-block-end: 0.2em solid var(--accent-yellow);
+  color: var(--primary-white);
+}
+
+thead tr {
+  background-color: var(--bg-blue);
 }
 
 tr:nth-child(2n) {
@@ -40,6 +45,7 @@ tbody tr td:not(:first-child) {
 }
 
 .table__title {
+  color: var(--dark-grey);
   text-align: left;
   flex-grow: 2;
 }

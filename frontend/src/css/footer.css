@@ -1,0 +1,17 @@
+footer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--bg-blue);
+  width: 100%;
+  height: var(--footer-height);
+  padding-inline: var(--padding-lg);
+  color: var(--primary-white);
+  border-block-start: 0.2em solid var(--accent-yellow);
+}
+
+footer ul li a {
+  color: var(--primary-white);
+}

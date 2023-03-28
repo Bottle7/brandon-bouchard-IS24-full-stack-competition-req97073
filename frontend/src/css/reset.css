@@ -27,6 +27,14 @@ body {
   padding: 0;
 }
 
+
+/* 
+  Remove link underline
+*/
+a {
+  text-decoration: none;
+}
+
 /* 
   Reapply the pointer cursor for anchor tags 
 */
