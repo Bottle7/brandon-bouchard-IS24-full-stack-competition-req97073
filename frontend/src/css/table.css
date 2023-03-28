@@ -42,6 +42,14 @@ tbody tr td:not(:first-child) {
 .table__title-bar {
   display: flex;
   align-items: center;
+  gap: var(--padding-md);
+  color: var(--dark-grey);
+  padding-inline-end: var(--padding-md);
+}
+
+.table__title-bar p {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h3);
 }
 
 .table__title {

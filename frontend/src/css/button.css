@@ -5,7 +5,7 @@
   padding-block: var(--padding-xs);
   padding-inline: var(--padding-md);
   text-align: center;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   background-color: var(--btn-bg);
   color: var(--btn-colour);
   cursor: pointer;
