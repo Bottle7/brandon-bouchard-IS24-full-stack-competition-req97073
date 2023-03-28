@@ -29,6 +29,11 @@
   --fs-h3: 1.563em;
 
   /*
+    Font weights
+  */
+  --fw-bold: 700;
+
+  /*
     Colours
   */
   --dark-grey: hsl(0, 0%, 14%);
