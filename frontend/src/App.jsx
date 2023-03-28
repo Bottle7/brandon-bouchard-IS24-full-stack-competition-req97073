@@ -1,10 +1,11 @@
+import Header from "./components/public/Header"
+import ProductsTable from "./components/public/ProductsTable"
+
 function App() {
   return (
     <div className="App">
-      <h1>IMB Product Catalogue</h1>
-      <p>
-        Hello, fellow cool kids!
-      </p>
+      <Header />
+      <ProductsTable />
     </div>
   )
 }

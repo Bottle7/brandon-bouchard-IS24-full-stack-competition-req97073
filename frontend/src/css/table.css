@@ -1,0 +1,37 @@
+table {
+  background-color: antiquewhite;
+  color: black;
+  width: 100%;
+  border-radius: 0.3em;
+}
+
+thead {
+  border-block-end: 0.2em solid lightslategray;
+}
+
+tr:nth-child(2n) {
+  background-color: bisque;
+}
+
+th:first-child {
+  padding-inline-start: var(--padding-2);
+}
+
+th {
+  text-align: start;
+  padding-inline-end: var(--padding-2);
+  padding-block: var(--padding-1);
+  white-space: nowrap;
+}
+
+td:not(:first-child) {
+  /* Personally, I think the product numbers look better centered 🙂 */
+  text-align: start;
+
+  max-width: min-content;
+  padding-inline-end: var(--padding-2);
+}
+
+.table__title {
+  text-align: left;
+}

@@ -1,3 +1,7 @@
 /* Common.css is used to aggregate all css files into a single import for main.jsx */
 @import './reset.css';
 @import './index.css';
+@import './heading.css';
+@import './button.css';
+@import './table.css';
+@import './list.css';
