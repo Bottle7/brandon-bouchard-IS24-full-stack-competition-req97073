@@ -1,5 +1,5 @@
 /** Import to squash error regarding no imports within module */
-import React from "react";
+import React from 'react';
 
 const Header = () => {
   return (

@@ -3,10 +3,12 @@ import ProductsTable from "./components/public/ProductsTable"
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Header />
-      <ProductsTable />
-    </div>
+      <div className="main-container">
+        <ProductsTable />
+      </div>
+    </>
   )
 }
 

@@ -1,37 +1,45 @@
 table {
-  background-color: antiquewhite;
-  color: black;
+  background-color: var(--primary-white);
+  color: var(--dark-grey);
   width: 100%;
-  border-radius: 0.3em;
+  border-radius: var(--radius-1);
+  filter: drop-shadow(0 0 0.5em var(--light-grey));
 }
 
 thead {
-  border-block-end: 0.2em solid lightslategray;
+  border-block-end: var(--padding-xs) solid var(--dark-grey);
 }
 
 tr:nth-child(2n) {
-  background-color: bisque;
+  background-color: var(--cream);
 }
 
 th:first-child {
-  padding-inline-start: var(--padding-2);
+  padding-inline-start: var(--padding-md);
 }
 
 th {
   text-align: start;
-  padding-inline-end: var(--padding-2);
-  padding-block: var(--padding-1);
+  padding-inline-end: var(--padding-md);
+  padding-block: var(--padding-sm);
   white-space: nowrap;
 }
 
-td:not(:first-child) {
-  /* Personally, I think the product numbers look better centered 🙂 */
-  text-align: start;
+tbody tr td:not(:first-child) {
+  width: max-content;
+  padding-inline-end: var(--padding-md);
+}
 
-  max-width: min-content;
-  padding-inline-end: var(--padding-2);
+.product-number {
+  text-align: center;
+}
+
+.table__title-bar {
+  display: flex;
+  align-items: center;
 }
 
 .table__title {
   text-align: left;
+  flex-grow: 2;
 }
