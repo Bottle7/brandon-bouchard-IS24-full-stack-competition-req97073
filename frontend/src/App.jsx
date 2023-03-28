@@ -1,12 +1,13 @@
-import Header from "./components/public/Header"
-import ProductsTable from "./components/public/ProductsTable"
+import { RouterProvider } from "react-router-dom";
+import Header from "./components/public/Header";
+import router from "./router/router";
 
 function App() {
   return (
     <>
       <Header />
       <div className="main-container">
-        <ProductsTable />
+        <RouterProvider router={router} />
       </div>
     </>
   )
