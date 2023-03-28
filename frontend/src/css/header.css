@@ -1,0 +1,12 @@
+header {
+  display: flex;
+  justify-content: start;
+  background-color: var(--bg-blue);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-height: var(--header-height);
+  padding-inline: var(--padding-lg);
+  z-index: 1;
+}

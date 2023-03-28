@@ -1,20 +1,41 @@
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.btn {
+  border-radius: 0.5em;
+  border: 0.15em solid var(--btn-border-colour);
+  height: 100%;
+  padding-block: var(--padding-xs);
+  padding-inline: var(--padding-md);
+  text-align: center;
+  font-weight: 700;
+  background-color: var(--btn-bg);
+  color: var(--btn-colour);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
-button:hover {
-  border-color: #646cff;
+.btn:hover {
+  --btn-bg: var(--bg-blue);
+  --btn-colour: var(--primary-white);
+  border-color: var(--bg-blue);
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.btn:focus,
+.btn:focus-within {
+  outline: 0.25em auto -webkit-focus-ring-color;
+}
+
+.btn-primary {
+  --btn-bg: var(--primary-blue);
+  --btn-colour: var(--cream);
+  --btn-border-colour: var(--primary-blue);
+}
+
+.btn-secondary {
+  --btn-colour: var(--primary-blue);
+  --btn-bg: var(--primary-white);
+  --btn-border-colour: var(--primary-blue); 
+}
+
+.btn-group {
+  display: flex;
+  gap: 0.3em;
 }

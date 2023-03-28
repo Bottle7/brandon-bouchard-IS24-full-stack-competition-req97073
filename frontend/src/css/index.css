@@ -1,18 +1,9 @@
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'BCSans', sans-serif;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: var(--primary-white);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,26 +12,68 @@
   -webkit-text-size-adjust: 100%;
 
   /*
-   Paddings
+    Paddings
   */
-  --padding-1: 1em;
-  --padding-2: 2em;
-  --padding-3: 3em;
+  --padding-xs: 0.5em;
+  --padding-sm: 1em;
+  --padding-md: 2em;
+  --padding-lg: 3em;
 
   /*
-   Headings sizes
+    Headings sizes
+
+    Major Third (1.250) scale
   */
-  --fs-h1: 3.2em;
-  --fs-h2: 2em;
-  --fs-h3: 1.5em;
+  --fs-h1: 2.441rem;
+  --fs-h2: 1.953em;
+  --fs-h3: 1.563em;
+
+  /*
+    Colours
+  */
+  --dark-grey: hsl(0, 0%, 14%);
+  --light-grey: hsl(0, 0%, 60%);
+  --bg-blue: #38598a;
+  --primary-blue: #036;
+  --accent-yellow: #fcba19;
+  --link-blue: #1a5a96;
+  --primary-white: #fff;
+  --cream: hsl(34, 78%, 91%);
+  --dolce: hsl(33, 100%, 88%);
+  --brown: hsl(0, 45%, 26%);
+  --cyan: cyan;
+
+  /*
+    Radii 
+  */
+  --radius-1: 0.3em;
+
+  /*
+    Heights
+  */
+  --header-height: 6em;
+  --footer-height: 4em;
 }
 
 body {
   place-items: center;
-  margin: 0;
   display: flex;
-  min-width: 20em;
+  justify-content: center;
+
+  width: 100%;
   min-height: 100dvh;
+
+  padding-block-start: calc(var(--header-height) + var(--padding-md));
+  padding-block-end: calc(var(--footer-height) + var(--padding-md));
+}
+
+a {
+  color: var(--link-blue);
+}
+
+.main-container {
+  position: relative;
+  width: 100%;
 }
 
 @media (prefers-color-scheme: light) {
