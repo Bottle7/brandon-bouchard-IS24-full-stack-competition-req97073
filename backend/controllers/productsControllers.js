@@ -98,6 +98,12 @@ exports.post_product = (req, res) => {
   try {
     const newProduct = req.body;
 
+    // Generate a unique (non-crypto) id using the last six digits of the date milliseconds at time of creation for each product on POST
+    const dateMillis = new Date().valueOf();
+    const productNumber = Number(dateMillis.toString().slice(7));
+
+    newProduct.product_number = productNumber;
+
     if (data) {
       data.push(newProduct) // Add product to list of products
     } else {
