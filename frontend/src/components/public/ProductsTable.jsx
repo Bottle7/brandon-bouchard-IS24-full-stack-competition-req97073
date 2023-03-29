@@ -15,13 +15,12 @@ const ProductsTable = () => {
     setTimeout(() => getAllProducts(), 100)
   }, [])
   
-  console.log(allProducts)
-
   return (
     <>
       <div className="table__title-bar">
         <h2 className="table__title">All Products</h2>
         <p>Total Products: <span>{allProducts.length}</span></p>
+        <Button secondary link linkRef='/search'>Search</Button>
         <Button link linkRef='/add'>Add New Product</Button>
       </div>
       <table>

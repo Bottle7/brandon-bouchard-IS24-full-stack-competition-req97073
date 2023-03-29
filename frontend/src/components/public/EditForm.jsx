@@ -11,7 +11,7 @@ const EditForm = () => {
   // 'state' is too ambiguous
   const product = state;
 
-  const { register, formState: { errors }, handleSubmit, clearErrors } = useForm({
+  const { register, formState: { errors }, handleSubmit } = useForm({
     defaultValues: {
       product_number: product.product_number,
       product_name: product.product_name,
@@ -31,7 +31,7 @@ const EditForm = () => {
     } catch (error) {
       if (error.response) throw Error("Server responded with an error", { cause: error.response })
       else if (error.request) throw Error("Network error", { cause: error.request })
-      else throw Error("Some unforeseen error has occurred", { cause: error.toJSON()})
+      else throw Error("Some unforeseen error has occurred", { cause: error.toJSON() })
     }
   }
 
