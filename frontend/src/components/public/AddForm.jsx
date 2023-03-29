@@ -24,7 +24,7 @@ const AddForm = () => {
     } catch (error) {
       if (error.response) throw Error("Server responded with an error", { cause: error.response })
       else if (error.request) throw Error("Network error", { cause: error.request })
-      else throw Error("Some unforeseen error has occurred", { cause: error.toJSON()})
+      else throw Error("Some unforeseen error has occurred", { cause: error.toJSON() })
     }
   }
 
