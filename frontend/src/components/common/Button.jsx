@@ -7,6 +7,7 @@ const Button = ({
   clickHandler, 
   link,
   linkRef,
+  product,
   children 
 }) => {
   const btnType = submit === true ? "submit" :  "button";
@@ -22,7 +23,7 @@ const Button = ({
         {children}
       </button>
     ) : (
-      <Link className={btnClass} to={linkRef}>{children}</Link>
+      <Link className={btnClass} to={linkRef} state={{...product}}>{children}</Link>
     )
   )
 }

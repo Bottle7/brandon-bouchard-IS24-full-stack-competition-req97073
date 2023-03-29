@@ -1,24 +1,31 @@
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import Button from "../common/Button";
 
-const AddForm = () => {
+const EditForm = () => {
   const navigate = useNavigate();
+
+  const { state } = useLocation();
+
+  // 'state' is too ambiguous
+  const product = state;
+
   const { register, handleSubmit } = useForm({
     defaultValues: {
-      product_name: '',
-      scrum_master: '',
-      product_owner: '',
-      developer_names: ['','','','',''],
-      start_date: Date(),
-      methodology: 'Agile'
+      product_number: product.product_number,
+      product_name: product.product_name,
+      scrum_master: product.scrum_master,
+      product_owner: product.product_owner,
+      developer_names: product.developer_names,
+      start_date: product.start_date,
+      methodology: product.methodology
     }
   });
 
   const onSubmit = async (data) => {
     try {
-      const response = axios.post('http://localhost:3000/products', data);
+      const response = axios.put(`http://localhost:3000/products/${product.product_number}`, data);
       console.log(response);
       navigate('/');
     } catch (error) {
@@ -30,7 +37,7 @@ const AddForm = () => {
 
   return (
     <>
-      <h2>Add Product</h2>
+      <h2>Edit Product</h2>
       <form onSubmit={handleSubmit(onSubmit)} method="post">
         <label>Product Name: 
           <input 
@@ -52,7 +59,7 @@ const AddForm = () => {
         </label>
         <label className="developer-names"><span>Developer Names:</span>
           <input 
-            {...register(`developer_names[0]`, { minLength: 2 })}
+            {...register(`developer_names[0]`, {  minLength: 2 })}
             type="text" 
           />
           <input 
@@ -70,12 +77,6 @@ const AddForm = () => {
           <input 
             {...register(`developer_names[4]`, { minLength: 2 })}
             type="text" 
-          />
-        </label>
-        <label>Start Date: 
-          <input 
-            {...register("start_date", { required: true, valueAsDate: true, min: "1970-01-01" })}
-            type="date"
           />
         </label>
         <label className="radio-group"><span>Methodology:</span>
@@ -98,11 +99,11 @@ const AddForm = () => {
         </label>
         <div className="btn-group">
           <Button link linkRef='/' secondary>Back</Button>
-          <Button submit>Save</Button>
+          <Button submit>Save Changes</Button>
         </div>
       </form>
     </>
   )
 }
 
-export default AddForm;
+export default EditForm;

@@ -6,6 +6,7 @@ form {
   padding-block: var(--padding-lg);
   padding-inline: calc(var(--padding-lg) + var(--padding-md));
   border-radius: var(--radius-1);
+  gap: var(--padding-sm);
 }
 
 form label {
