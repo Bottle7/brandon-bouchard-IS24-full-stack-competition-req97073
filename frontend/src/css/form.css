@@ -1,0 +1,69 @@
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: 0 0 0.5em var(--light-grey);
+  width: 100%;
+  padding-block: var(--padding-lg);
+  padding-inline: calc(var(--padding-lg) + var(--padding-md));
+  border-radius: var(--radius-1);
+}
+
+form label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: var(--fw-bold);
+  gap: var(--padding-sm);
+  height: max-content;
+  max-width: 85%;
+  grid-column: 1 / 2;
+}
+
+form label input {
+  font-weight: var(--fw-regular);
+  min-width: 12rem;
+  border: 0.15em solid var(--light-grey);
+  border-radius: var(--radius-1); 
+  accent-color: var(--primary-blue);
+  justify-self: end;
+}
+
+input[type="radio"] {
+  min-width: 0;
+  margin: 0;
+  accent-color: var(--primary-blue);
+}
+
+.radio-group {
+  display: flex;
+  gap: var(--padding-xs);
+  font-weight: var(--fw-bold);
+  grid-column: 1 / 2;
+}
+
+.radio-group span {
+  flex-grow: 1;
+}
+
+.radio-group > label {
+  display: flex;
+  gap: var(--padding-xs);
+  font-weight: var(--fw-regular);
+}
+
+.developer-names {
+  display: grid;
+  grid-column: 2 / 3;
+  grid-row: 1 / 6;
+  gap: var(--padding-sm);
+}
+
+.developer-names span {
+  grid-column: 1 / 2;
+}
+
+.developer-names input {
+  grid-column: 2 / 3;
+  display: flex;
+  align-items: center;
+}

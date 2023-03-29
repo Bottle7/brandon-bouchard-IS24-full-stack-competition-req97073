@@ -10,4 +10,5 @@ header {
   max-height: var(--header-height);
   padding-inline: var(--padding-lg);
   z-index: 1;
+  color: var(--primary-white);
 }

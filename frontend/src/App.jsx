@@ -1,14 +1,22 @@
-import { RouterProvider } from "react-router-dom";
-import Footer from "./components/public/Footer";
-import Header from "./components/public/Header";
-import router from "./router/router";
+import {
+  Routes,
+  Route
+} from 'react-router-dom'
+import AddForm from './components/public/AddForm';
+import Footer from './components/public/Footer';
+import Header from './components/public/Header';
+import ProductsTable from './components/public/ProductsTable'
 
 function App() {
   return (
     <>
       <Header />
       <div className="main-container">
-        <RouterProvider router={router} />
+        <Routes>
+          <Route path='/' element={<ProductsTable />} />
+          <Route path='/add' element={<AddForm />} />
+          <Route path='/edit' element />
+        </Routes>
       </div>
       <Footer />
     </>

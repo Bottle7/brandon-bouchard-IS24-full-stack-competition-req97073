@@ -2,7 +2,7 @@
   font-family: 'BCSans', sans-serif;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: light;
   background-color: var(--primary-white);
 
   font-synthesis: none;
@@ -32,6 +32,7 @@
     Font weights
   */
   --fw-bold: 700;
+  --fw-regular: 400;
 
   /*
     Colours
@@ -80,6 +81,7 @@ a {
 .main-container {
   position: relative;
   width: 100%;
+  min-width: 1080px;
 }
 
 @media (prefers-color-scheme: light) {
