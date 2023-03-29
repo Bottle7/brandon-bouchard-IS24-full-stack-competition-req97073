@@ -5,7 +5,7 @@ import Button from "../common/Button";
 
 const AddForm = () => {
   const navigate = useNavigate();
-  const { register, handleSubmit } = useForm({
+  const { register, formState: { errors }, handleSubmit } = useForm({
     defaultValues: {
       product_name: '',
       scrum_master: '',
@@ -31,57 +31,66 @@ const AddForm = () => {
   return (
     <>
       <h2>Add Product</h2>
+      {errors.product_name && <p className="error-message">{errors.product_name.message}</p>}
+      {errors.scrum_master && <p className="error-message">{errors.scrum_master.message}</p>}
+      {errors.product_owner && <p className="error-message">{errors.product_owner.message}</p>}
+      {errors.developer_names && errors.developer_names[0] && <p className="error-message">{errors.developer_names[0].message}</p>}
+      {errors.developer_names && errors.developer_names[1] && <p className="error-message">{errors.developer_names[1].message}</p>}
+      {errors.developer_names && errors.developer_names[2] && <p className="error-message">{errors.developer_names[2].message}</p>}
+      {errors.developer_names && errors.developer_names[3] && <p className="error-message">{errors.developer_names[3].message}</p>}
+      {errors.developer_names && errors.developer_names[4] && <p className="error-message">{errors.developer_names[4].message}</p>}
+      {errors.start_date && <p className="error-message">{errors.start_date.message}</p>}
       <form onSubmit={handleSubmit(onSubmit)} method="post">
         <label>Product Name: 
           <input 
-            {...register("product_name", { required: true, minLength: 2 })}
+            {...register("product_name", { required: 'Please enter a product name.', minLength: { value: 2, message: 'Name must be at lease two letter long.'} })}
             type="text" 
           />
         </label>
         <label>Scrum Master: 
           <input 
-            {...register("scrum_master", { required: true, minLength: 2 })}
+            {...register("scrum_master", { required: 'Please enter a scrum master name.', minLength: { value: 2, message: 'Name must be at lease two letter long.'} })}
             type="text" 
           />
         </label>
         <label>Product Owner: 
           <input 
-            {...register("product_owner", { required: true, minLength: 2 })}
+            {...register("product_owner", { required: 'Please enter a product owner name.', minLength: { value: 2, message: 'Name must be at lease two letter long.'} })}
             type="text" 
           />
         </label>
         <label className="developer-names"><span>Developer Names:</span>
           <input 
-            {...register(`developer_names[0]`, { minLength: 2 })}
+            {...register(`developer_names[0]`, { required: 'Please enter developer names starting with the first input area.', minLength: { value: 2, message: 'Name must be at lease two letter long.'} })}
             type="text" 
           />
           <input 
-            {...register(`developer_names[1]`, { minLength: 2 })}
+            {...register(`developer_names[1]`, { minLength: { value: 2, message: 'Name must be at lease two letter long.'} })}
             type="text" 
           />
           <input 
-            {...register(`developer_names[2]`, { minLength: 2 })}
+            {...register(`developer_names[2]`, { minLength: { value: 2, message: 'Name must be at lease two letter long.'} })}
             type="text" 
           />
           <input 
-            {...register(`developer_names[3]`, { minLength: 2 })}
+            {...register(`developer_names[3]`, { minLength: { value: 2, message: 'Name must be at lease two letter long.'} })}
             type="text" 
           />
           <input 
-            {...register(`developer_names[4]`, { minLength: 2 })}
+            {...register(`developer_names[4]`, { minLength: { value: 2, message: 'Name must be at lease two letter long.'} })}
             type="text" 
           />
         </label>
         <label>Start Date: 
           <input 
-            {...register("start_date", { required: true, valueAsDate: true, min: "1970-01-01" })}
+            {...register("start_date", { required: 'Please enter a start date.', valueAsDate: true })}
             type="date"
           />
         </label>
         <label className="radio-group"><span>Methodology:</span>
           <label>
             <input 
-              {...register("methodology", { required: true })}
+              {...register("methodology", { required: true})}
               type="radio" 
               value="Agile"
             />
