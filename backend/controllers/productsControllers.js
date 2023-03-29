@@ -104,6 +104,9 @@ exports.post_product = (req, res) => {
 
     newProduct.product_number = productNumber;
 
+    // Trim the date string to YYYY-MM-DD
+    newProduct.start_date = newProduct.start_date.slice(0, 10)
+
     if (data) {
       data.push(newProduct) // Add product to list of products
     } else {
