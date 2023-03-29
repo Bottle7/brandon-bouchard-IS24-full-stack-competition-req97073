@@ -21,7 +21,7 @@ const ProductsTable = () => {
       <div className="table__title-bar">
         <h2 className="table__title">All Products</h2>
         <p>Total Products: <span>{allProducts.length}</span></p>
-        <Button>Add</Button>
+        <Button link linkRef='/add'>Add</Button>
       </div>
       <table>
         <thead>

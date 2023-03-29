@@ -1,20 +1,29 @@
+import { Link } from 'react-router-dom'
+
 const Button = ({ 
-  variant, 
+  submit, 
   secondary, 
+  tertiary,
   clickHandler, 
+  link,
+  linkRef,
   children 
 }) => {
-  const btnType = variant === "submit" ? "submit" :  "button";
-  const btnClass = `btn ${secondary === true ? "btn-secondary" : "btn-primary"}`
+  const btnType = submit === true ? "submit" :  "button";
+  const btnClass = `btn ${secondary ? "btn-secondary" : tertiary ? "btn-tertiary" : "btn-primary"}`
 
   return (
-    <button 
-      className={btnClass} 
-      type={btnType} 
-      onClick={clickHandler}
-    >
-      {children}
-    </button>
+    !link ? (
+      <button 
+        className={btnClass} 
+        type={btnType} 
+        onClick={clickHandler}
+      >
+        {children}
+      </button>
+    ) : (
+      <Link className={btnClass} to={linkRef}>{children}</Link>
+    )
   )
 }
 

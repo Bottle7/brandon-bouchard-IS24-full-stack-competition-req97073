@@ -2,6 +2,7 @@
   border-radius: 0.5em;
   border: 0.15em solid var(--btn-border-colour);
   height: 100%;
+  max-width: max-content;
   padding-block: var(--padding-xs);
   padding-inline: var(--padding-md);
   text-align: center;
@@ -25,7 +26,7 @@
 
 .btn-primary {
   --btn-bg: var(--primary-blue);
-  --btn-colour: var(--cream);
+  --btn-colour: var(--primary-white);
   --btn-border-colour: var(--primary-blue);
 }
 
@@ -35,7 +36,22 @@
   --btn-border-colour: var(--primary-blue); 
 }
 
+.btn-tertiary {
+  --btn-colour: var(--primary-blue);
+  --btn-bg: transparent;
+  padding-block: 0;
+}
+
 .btn-group {
   display: flex;
-  gap: 0.3em;
+  justify-content: space-between;
+  gap: var(--padding-xs);
+  grid-column: 1 / 3;
+  margin-block-start: var(--padding-md);
+  max-width: 92.5%;
+}
+
+.btn-group .btn:first-child {
+  flex-grow: 1;
+  margin-inline-end: auto;
 }
