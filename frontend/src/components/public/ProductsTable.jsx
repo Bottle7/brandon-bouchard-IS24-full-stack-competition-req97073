@@ -11,7 +11,8 @@ const ProductsTable = () => {
   }
 
   useEffect(() => {
-    getAllProducts();
+    // Slight delay to ensure values are updated
+    setTimeout(() => getAllProducts(), 100)
   }, [])
   
   console.log(allProducts)
@@ -21,7 +22,7 @@ const ProductsTable = () => {
       <div className="table__title-bar">
         <h2 className="table__title">All Products</h2>
         <p>Total Products: <span>{allProducts.length}</span></p>
-        <Button link linkRef='/add'>Add</Button>
+        <Button link linkRef='/add'>Add New Product</Button>
       </div>
       <table>
         <thead>
@@ -51,7 +52,7 @@ const ProductsTable = () => {
                 </ul> </td>
               <td>{product.start_date}</td>
               <td>{product.methodology}</td>
-              <td><Button secondary>Edit</Button></td>
+              <td><Button link linkRef="/edit" product={product} secondary>Edit</Button></td>
             </tr>
           ))}
         </tbody>

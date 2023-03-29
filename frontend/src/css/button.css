@@ -3,7 +3,8 @@
   border: 0.15em solid var(--btn-border-colour);
   height: 100%;
   max-width: max-content;
-  padding-block: var(--padding-xs);
+  padding-block-start: calc(var(--padding-xs) + 0.15em); /* Extra em makes the button text look more centered */
+  padding-block-end: var(--padding-xs);
   padding-inline: var(--padding-md);
   text-align: center;
   font-weight: var(--fw-bold);
