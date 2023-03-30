@@ -66,15 +66,15 @@ const { productsControllers } = require('../controllers')
  *   get:
  *     summary: Get all products
  *     tags: [Products]
- *     requestBody:
- *       required: false
  *     responses:
  *       200:
  *         description: Successfully retrieved products.
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/Product'
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/Product'
  *       404:
  *         description: No products found.
  */
@@ -142,7 +142,9 @@ router.get('/:id', productsControllers.get_product_by_id);
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/Product'
+ *               type: array
+ *               items: 
+ *                 $ref: '#/components/schemas/Product'
  *       404:
  *         description: Products or Scrum Master not found.
  */
@@ -176,7 +178,9 @@ router.get('/scrummaster/:scrum_master', productsControllers.get_products_by_scr
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/Product'
+ *               type: array
+ *               items: 
+ *                 $ref: '#/components/schemas/Product'
  *       404:
  *         description: Products or developer not found.
  */
