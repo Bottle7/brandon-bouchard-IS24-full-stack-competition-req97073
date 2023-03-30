@@ -18,7 +18,7 @@ const AddForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = axios.post('http://localhost:3000/products', data);
+      const response = axios.post('http://localhost:3000/api/products', data);
       console.log(response);
       navigate('/');
     } catch (error) {

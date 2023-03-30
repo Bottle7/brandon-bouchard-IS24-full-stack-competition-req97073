@@ -15,7 +15,7 @@ const Search = () => {
 
   const onSubmit = async (formData) => {
     try {
-      const { data } = await axios.get(`http://localhost:3000/products/${formData.endpoint}/${formData.searchTerm}`);
+      const { data } = await axios.get(`http://localhost:3000/api/products/${formData.endpoint}/${formData.searchTerm}`);
       setProducts(data);
       console.log(data)
     } catch (error) {
