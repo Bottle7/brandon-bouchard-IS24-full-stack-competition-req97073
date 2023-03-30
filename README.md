@@ -36,7 +36,7 @@ Run the following command:
 git clone https://github.com/Bottle7/brandon-bouchard-IS24-full-stack-competition-req97073.git
 ```
 
-**NOTE:** This is using the HTTPS method of cloning a repository for maximum accessibilty; however, it is typically advised to clone via SSH for security purposes.
+> **NOTE:** This is using the HTTPS method of cloning a repository for maximum accessibilty; however, it is typically advised to clone via SSH for security purposes.
 
 ### Install node packages locally within each microservice's directory
 Run the following commands, in your terminal/command line interface, from this directory on your local machine:
