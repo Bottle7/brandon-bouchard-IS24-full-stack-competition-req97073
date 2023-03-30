@@ -25,7 +25,7 @@ const EditForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = axios.put(`http://localhost:3000/products/${product.product_number}`, data);
+      const response = axios.put(`http://localhost:3000/api/products/${product.product_number}`, data);
       console.log(response);
       navigate('/');
     } catch (error) {
