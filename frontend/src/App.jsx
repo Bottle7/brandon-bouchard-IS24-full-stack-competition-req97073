@@ -6,6 +6,7 @@ import AddForm from './components/public/AddForm';
 import EditForm from './components/public/EditForm';
 import Footer from './components/public/Footer';
 import Header from './components/public/Header';
+import NotFound from './components/public/NotFound';
 import ProductsTable from './components/public/ProductsTable'
 import Search from './components/public/Search';
 
@@ -19,6 +20,7 @@ function App() {
           <Route path='/add' element={<AddForm />} />
           <Route path='/edit' element={<EditForm />} />
           <Route path='/search' element={<Search />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </div>
       <Footer />
