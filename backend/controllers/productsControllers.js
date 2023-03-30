@@ -55,8 +55,7 @@ exports.get_products_by_scrum_master = (req, res) => {
 
   try {
     const products = data.filter(product => {
-      console.log(product)
-      return product.scrum_master === scrum_master;
+      return product.scrum_master.toLowerCase() === scrum_master.toLowerCase();
     });
 
     if (Array.isArray(products) && products.length !== 0) res.status(200).json(products); // As long as products is an array of length greater than 0, return products.
@@ -78,7 +77,7 @@ exports.get_products_by_developer = (req, res) => {
 
   try {
     const products = data.filter(product => {
-      return product.developer_names.find(dev => dev === developer);
+      return product.developer_names.find(dev => dev.toLowerCase() === developer.toLowerCase());
     });
 
     if (Array.isArray(products) && products.length !== 0) res.status(200).json(products); // As long as products is an array of length greater than 0, return products.
