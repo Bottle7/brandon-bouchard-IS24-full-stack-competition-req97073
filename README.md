@@ -5,8 +5,8 @@
 __This is a submission for the 2023 BC Gov IS24 Full Stack Developer job competition.__
 
 ## Table of Contents
-- [Summary](https://github.com/Bottle7/brandon-bouchard-IS24-full-stack-competition-req97073/tree/root-readme#summary)
-- [Getting Started](https://github.com/Bottle7/brandon-bouchard-IS24-full-stack-competition-req97073/tree/root-readme#getting-started)
+- [Summary](#summary)
+- [Getting Started](#getting-started)
 
 ## Summary
 
@@ -17,7 +17,7 @@ __This is a submission for the 2023 BC Gov IS24 Full Stack Developer job competi
 - React Hooks Form —— Web App
 - ExpressJS —— API
 
-### ![](https://img.shields.io/badge/features-green?style=for-the-badge)
+### ![](https://img.shields.io/badge/features-FFA0AC?style=for-the-badge)
 - View all products
 - View products by Scrum Master
 - View products by developer name
@@ -29,6 +29,7 @@ __This is a submission for the 2023 BC Gov IS24 Full Stack Developer job competi
 
 ### Install node packages locally within each microservice's directory
 Run the following commands, in your terminal/command line interface, from this directory on your local machine
+
 1. Backend package installation
 ```
 cd ./backend
@@ -36,6 +37,7 @@ npm install
 ```
 
 Run the following commands, in your terminal/command line interface, from this directory on your local machine
+
 2. Frontend package installation
 ```
 cd ./frontend
